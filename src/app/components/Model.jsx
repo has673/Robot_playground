@@ -19,11 +19,11 @@ const Model = () => {
       //@ts-ignore
       (actions["Experiment"].time =
         //@ts-ignore
-        (actions["Experiment"].getClip().duration * scroll.offset) / 4)
+        (actions["Experiment"].getClip().duration * scroll.offset) / 2)
   )
 
   return (
-    <group ref={ref} scale={[1.5, 1.5, 1.5]}>
+    <group ref={ref} scale={[0.5, 0.5, 0.5] }>
       <primitive object={scene} />
     </group>
   )

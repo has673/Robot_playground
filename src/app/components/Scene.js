@@ -4,6 +4,8 @@ import { Canvas, useThree } from "@react-three/fiber"
 import Model from "./Model"
 import { Suspense } from "react"
 import { useProgress, Html, ScrollControls } from "@react-three/drei"
+import Modal from "./Modal"
+import { Color } from "three"
 
 function Loader() {
   const { progress, active } = useProgress()
@@ -13,11 +15,12 @@ function Loader() {
 
 export default function Scene() {
   return (
-    <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="relative h-svh">
-      <directionalLight position={[-5, -5, 5]} intensity={4} />
+    <Canvas  style={{height:500}}>
+   
+      <ambientLight position={[-5, -5, 5]} intensity={10} />
       <Suspense fallback={<Loader />}>
         <ScrollControls damping={0.5} pages={8}>
-          <Model />
+    <Modal/>
         </ScrollControls>
       </Suspense>
     </Canvas>
