@@ -5,7 +5,7 @@ import Model from "./Model"
 import { Suspense } from "react"
 import { useProgress, Html, ScrollControls } from "@react-three/drei"
 import Modal from "./Modal"
-import { Color } from "three"
+
 
 function Loader() {
   const { progress, active } = useProgress()
@@ -15,12 +15,12 @@ function Loader() {
 
 export default function Scene() {
   return (
-    <Canvas  style={{height:500}}>
+    <Canvas  style={{height:600 , width:1400}}>
    
       <ambientLight position={[-5, -5, 5]} intensity={10} />
       <Suspense fallback={<Loader />}>
         <ScrollControls damping={0.5} pages={8}>
-    <Modal/>
+    <Model/>
         </ScrollControls>
       </Suspense>
     </Canvas>
