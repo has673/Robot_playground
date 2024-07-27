@@ -1,5 +1,5 @@
 import { useAnimations, useGLTF, ScrollControls, useScroll } from '@react-three/drei'
-import { Canvas, useFrame } from '@react-three/fiber'
+import {  useFrame } from '@react-three/fiber'
 import { useEffect, useRef } from 'react'
 
 useGLTF.preload('./robot_playground.glb')

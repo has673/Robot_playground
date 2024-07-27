@@ -6,7 +6,7 @@ const Scene = dynamic(() => import('./components/Scene'), { ssr: false });
 
 export default function Home() {
   return (
-    <main className="h-full">
+    <main  className="w-full">
       <Scene/>
     </main>
   );
