@@ -36,3 +36,25 @@ body {
     text-wrap: balance;
   }
 }
+@keyframes smoke {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-5px) translateY(-20px) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-10px) translateY(-40px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.smoke-text {
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  position: relative;
+  animation: smoke 5s infinite;
+}
