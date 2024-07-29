@@ -20,7 +20,7 @@ export default function Scene() {
       className="w-full h-full" 
       
     >
-    <color attach="background" args={['#ffffff']} />
+    <color attach="background" args={["#000000"]} />
       <ambientLight position={[-5, -5, 5]} intensity={10} />
       <Suspense fallback={<Loader />}>
         <ScrollControls damping={1} pages={10}>
