@@ -3,7 +3,7 @@
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import { Suspense } from "react";
-import { useProgress, Html, ScrollControls } from "@react-three/drei";
+import { useProgress, Html, ScrollControls,PerspectiveCamera } from "@react-three/drei";
 import Head from "./Head";
 
 function Loader() {
@@ -20,6 +20,7 @@ export default function Scene() {
       className="w-full h-full" 
       
     >
+    <PerspectiveCamera makeDefault position={[0, 2, 10]} fov={50} />
     <color attach="background" args={["#000000"]} />
       <ambientLight position={[-5, -5, 5]} intensity={10} />
       <Suspense fallback={<Loader />}>

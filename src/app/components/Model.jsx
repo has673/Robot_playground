@@ -23,7 +23,7 @@ const Model = () => {
   )
 
   return (
-    <group ref={ref} scale={[2.5, 1.5, 1] }>
+    <group ref={ref} scale={[2.5, 1.5, 1.5] }>
       <primitive object={scene} />
     </group>
   )
